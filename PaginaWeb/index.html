@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Cane Monitor</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <header>
+
+        <div>
+
+            <h1>🦯 Smart Cane Monitor</h1>
+
+            <p>Sistema de monitoreo en tiempo real</p>
+
+        </div>
+
+        <div class="hora" id="hora">
+
+            00:00:00
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <aside>
+
+            <div class="card">
+
+                <h2>Estado</h2>
+
+                <p>🟢 ESP32 <span id="estado">Conectando...</span></p>
+
+                <p>📡 GPS <span id="gps">Buscando...</span></p>
+
+                <p>📶 WiFi <span id="wifi">Desconectado</span></p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Obstáculos</h2>
+
+                <p>⬆ Superior: <span id="superior">Libre</span></p>
+
+                <p>➡ Medio: <span id="medio">Libre</span></p>
+
+                <p>⬇ Inferior: <span id="inferior">Libre</span></p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Ubicación</h2>
+
+                <p>📍 Latitud</p>
+
+                <p id="latitud">0.000000</p>
+
+                <p>📍 Longitud</p>
+
+                <p id="longitud">0.000000</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Información</h2>
+
+                <p>🚶 Velocidad</p>
+
+                <p id="velocidad">0 km/h</p>
+
+                <p>🕒 Última actualización</p>
+
+                <p id="actualizacion">Hace 0 segundos</p>
+
+            </div>
+
+        </aside>
+
+        <section id="map">
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        Smart Cane Monitor © 2026
+
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
